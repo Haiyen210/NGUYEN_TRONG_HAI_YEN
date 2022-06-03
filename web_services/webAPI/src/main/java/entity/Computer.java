@@ -1,0 +1,86 @@
+package entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TblComputer")
+
+public class Computer {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ComId")
+	private int ComId;
+	
+	@Column(name="ComName")
+	private String ComName;
+	
+	@Column(name = "Producer")
+	private String Producer;
+	
+	@Column(name = "Price")
+	private float Price;
+	
+	@Column(name = "Description")
+	private String Description;
+
+	public Computer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Computer(int comId, String comName, String producer, float price, String description) {
+		super();
+		ComId = comId;
+		ComName = comName;
+		Producer = producer;
+		Price = price;
+		Description = description;
+	}
+
+	public int getComId() {
+		return ComId;
+	}
+
+	public void setComId(int comId) {
+		ComId = comId;
+	}
+
+	public String getComName() {
+		return ComName;
+	}
+
+	public void setComName(String comName) {
+		ComName = comName;
+	}
+
+	public String getProducer() {
+		return Producer;
+	}
+
+	public void setProducer(String producer) {
+		Producer = producer;
+	}
+
+	public float getPrice() {
+		return Price;
+	}
+
+	public void setPrice(float price) {
+		Price = price;
+	}
+
+	public String getDescription() {
+		return Description;
+	}
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+	
+	
+}

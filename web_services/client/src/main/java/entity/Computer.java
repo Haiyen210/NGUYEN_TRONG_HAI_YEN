@@ -1,0 +1,79 @@
+package entity;
+
+public class Computer {
+	private int ComId;
+	
+	private String ComName;
+	
+	private String Producer;
+	
+	private float Price;
+	
+	private String Description;
+
+	public Computer() {
+		super();
+	}
+	
+
+	public Computer(String comName, String producer, float price, String description) {
+		super();
+		ComName = comName;
+		Producer = producer;
+		Price = price;
+		Description = description;
+	}
+
+
+
+	public Computer(int comId, String comName, String producer, float price, String description) {
+		super();
+		ComId = comId;
+		ComName = comName;
+		Producer = producer;
+		Price = price;
+		Description = description;
+	}
+
+	public int getComId() {
+		return ComId;
+	}
+
+	public void setComId(int comId) {
+		ComId = comId;
+	}
+
+	public String getComName() {
+		return ComName;
+	}
+
+	public void setComName(String comName) {
+		ComName = comName;
+	}
+
+	public String getProducer() {
+		return Producer;
+	}
+
+	public void setProducer(String producer) {
+		Producer = producer;
+	}
+
+	public float getPrice() {
+		return Price;
+	}
+
+	public void setPrice(float price) {
+		Price = price;
+	}
+
+	public String getDescription() {
+		return Description;
+	}
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+	
+	
+}

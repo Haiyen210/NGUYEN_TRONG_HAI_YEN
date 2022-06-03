@@ -1,0 +1,20 @@
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thêm mới</title>
+</head>
+<body>
+
+<h1>Thêm sản phẩm</h1>
+<form action="InsertComServlet" method="post">
+	Name <input type="text" name="name"/><br>
+	Producer <input type="text" name="producer"/><br>
+	Price <input type="text" name="price"/><br>
+	description <input type="text" name="description"/><br>
+	<button>Lưu</button>
+</form>
+</body>
+</html>

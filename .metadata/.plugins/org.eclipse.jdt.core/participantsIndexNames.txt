@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+D:\BUI_CONG_TIEN_B9074\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1060206652.index
+\client_serve\src\main\java
+C:\Users\YEN_XINH\Downloads\BUI_CONG_TIEN_B9074\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1060206652.index
+\client_serve\src\main\java

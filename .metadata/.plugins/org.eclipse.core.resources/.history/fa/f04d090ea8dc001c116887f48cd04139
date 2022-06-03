@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Services Exam 03</title>
+</head>
+<body>
+	<h1>Computer's List</h1>
+	<a href="insert.jsp">Add new</a>
+	<table border="1">
+		<tr>
+			<th>STT</th>
+			<th>Name</th>
+			<th>Producer</th>
+			<th>Price</th>
+			<th>Description</th>
+			<th>Funtion</th>
+		</tr>
+		<c:forEach items="${computers}" var="p" varStatus="loop">
+			<tr>
+				<td>${loop.index+1}</td>
+				<td>${p.ComName}</td>
+				<td>${p.Producer}</td>
+				<td>${p.Price}</td>
+				<td>${p.Description}</td>
+				<td>
+				<a
+					href="DeleteComServlet?id=<fmt:formatNumber value="${p.id}" minFractionDigits="0" maxFractionDigits="0"/>">Xóa</a></td>
+				</tr>
+		</c:forEach>
+	</table>
+</body>
+</html>

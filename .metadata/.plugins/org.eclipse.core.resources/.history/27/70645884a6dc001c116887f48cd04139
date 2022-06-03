@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Danh sách máy t</title>
+</head>
+<body>
+	<h1>Danh Sách Máy Tính</h1>
+	<a href="insert.jsp">Thêm mới</a>
+	<table border="1">
+		<tr>
+			<th>STT</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Sale_price</th>
+			<th>Description</th>
+			<th>image</th>
+			<th>status</th>
+			<th>Funtion</th>
+		</tr>
+		<c:forEach items="${computers}" var="p">
+			<tr>
+				<td>${p.ComId}</td>
+				<td>${p.ComName}</td>
+				<td>${p.Producer}</td>
+				<td>${p.Price}</td>
+				<td>${p.Description}</td>
+				<td><a
+					href="DeleteComServlet?id=<fmt:formatNumber value="${p.id}" minFractionDigits="0" maxFractionDigits="0"/>">Xóa</a></td>
+			</tr>
+
+		</c:forEach>
+
+
+	</table>
+</body>
+</html>
